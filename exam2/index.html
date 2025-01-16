@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашний комфорт</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <h1>Домашний комфорт</h1>
+            </div>
+            <form class="search-form">
+                <input type="text" placeholder="Искать товары..." id="search">
+                <button type="submit">Поиск</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <aside class="filters">
+            <h2>Фильтры</h2>
+            <div class="filter-group">
+                <label for="min-price">Цена от:</label>
+                <input type="number" id="min-price" placeholder="100">
+                <label for="max-price">Цена до:</label>
+                <input type="number" id="max-price" placeholder="5000">
+            </div>
+            <div class="filter-group">
+                <label>
+                    <input type="checkbox" id="discounts"> Только со скидкой
+                </label>
+            </div>
+            <button id="apply-filters">Применить</button>
+        </aside>
+        <section class="catalog">
+            <div class="catalog-header">
+                <h2>Каталог товаров</h2>
+                <select id="sort">
+                    <option value="rating-desc">Рейтинг ↓</option>
+                    <option value="rating-asc">Рейтинг ↑</option>
+                    <option value="price-desc">Цена ↓</option>
+                    <option value="price-asc">Цена ↑</option>
+                </select>
+            </div>
+            <div id="product-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Домашний комфорт. Все права защищены.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

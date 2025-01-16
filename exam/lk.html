@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="lk.css">
+</head>
+
+<!--УБРАТЬ ПОЛОСУ СКРОЛЛИНГА НА ВСЕХ СТРАНИЦАХ ДЛЯ ВСЕХ ФОРМАТОВ-->
+
+<!-- Сайт по продаже шпоргалок для учащихся в МосПолитехе -->
+<!--https://www.schoolsw3.com/howto/howto_js_filter_dropdown.php-->
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagesForExam/Logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="mainMenu">
+            <a class="icons" id="catalog" href="index.html">
+                <img src="imagesForExam/Catalog.png" alt="catalog">
+            </a>
+            <a class="icons" href="basket.html">
+                <img src="imagesForExam/Basket.png" alt="basket">
+            </a>
+            <a class="icons" id="lk" href="">
+                <img src="imagesForExam/Lk.png" alt="lk">
+            </a>
+        </nav>
+    </header>
+    <!-- Уведомление -->
+    <div class="notification">
+        <span>Текст сообщения</span>
+        <button class="close-btn"></button>
+    </div>
+    <main class="container">
+        <h2>Заказы</h2>
+        <div class="pull-offers">
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Дата оформления</th>
+                        <th>Состав заказа</th>
+                        <th>Стоимость</th>
+                        <th>Доставка</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--Данные будут загружены с сервера-->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer id="contacts">
+        <div class="contact">
+            <p>Позвонить нам: +7 (495) 223-05-23 </p>
+            <p>Stepanov Yura 231-3213 Exam</p>
+        </div>
+    </footer>
+    <script src="lk.js"> defer</script>
+</body>
+</html>

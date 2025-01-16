@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главаная страница</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<!-- Сайт по продаже шпоргалок для учащихся в МосПолитехе -->
+<!--https://www.schoolsw3.com/howto/howto_js_filter_dropdown.php-->
+<!--СДЕЛАТЬ ОТМЕНУ ВЫБОРА В КАТАЛОГЕ ПРИ ПОВТОРНОМ НАЖАТИИ-->
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagesForExam/Logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="str-request">
+            <form>
+                <input type="search" name="text" class="search" placeholder="Что вы хотите найти?">
+                <input type="submit" name="submit" class="submit" value="Найти">
+            </form>
+        </div>
+        <nav class="mainMenu">
+            <a class="icons" id="catalog" href="">
+                <img src="imagesForExam/Catalog.png" alt="catalog">
+            </a>
+            <a class="icons" href="basket.html">
+                <img src="imagesForExam/Basket.png" alt="basket">
+            </a>
+            <a class="icons" href="lk.html">
+                <img src="imagesForExam/Lk.png" alt="lk">
+            </a>
+        </nav>
+    </header>
+    <!-- Уведомление -->
+    <div class="notification"></div>    
+    <main class="container">
+        <aside class="sidebar">
+            <h3>Категории</h3>
+            <label><input type="checkbox" id="filterMath" name="filterMath">ВысшМат</label>
+            <label><input type="checkbox" id="filterWeb" name="filterWeb">WebDev</label>
+            <label><input type="checkbox" id="filterEng" name="filterEng">Английский</label>
+            <label><input type="checkbox" id="filterLinks" name="filterLinks">Сети</label>
+            <label><input type="checkbox" id="filterLinux" name="filterLinux">linux/Windows</label>
+
+            <h3>Стоимость</h3>
+            <label><p class="pDiscount">От</p><input type="number" min="0" max="15000" placeholder="0"></label>
+            <label><p class="pDiscount">До</p><input type="number" min="0" max="15000" placeholder="15000"></label>
+
+            <label><input type="checkbox" id="onlyDiscounts" name="onlyDiscounts">Только товары со скидками</label>
+
+            <button type="button" class="sidebar-btn">Применить</button>
+        </aside>
+
+        <section class="catalog">
+            <div class="header-catalog">
+                <h2>Каталог</h2>
+                <select name="sort-select" id="sort-select">
+                    <option value="rating-down">По убыванию рейтинга</option>
+                    <option value="rating-up">По возрастанию рейтинга</option>
+                    <option value="price-down">По убыванию цены</option>
+                    <option value="price-up">По возрастанию цены</option>
+                </select>
+            </div>
+            <div class="catalog-items"></div>
+        </section>
+    </main>
+    <footer id="contacts">
+        <div class="contact">
+            <p>Позвонить нам: +7 (495) 223-05-23 </p>
+            <p>Stepanov Yura 231-3213 Exam</p>
+        </div>
+    </footer>
+    <script src="array.js"> defer</script>
+    <script src="index.js"> defer</script>
+</body>
+</html>

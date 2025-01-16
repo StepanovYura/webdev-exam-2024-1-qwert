@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="basket.css">
+</head>
+
+<!--УБРАТЬ ПОЛОСУ СКРОЛЛИНГА НА ВСЕХ СТРАНИЦАХ ДЛЯ ВСЕХ ФОРМАТОВ-->
+<!--ДОБАВИТЬ МОБИЛЬНЫЕ ВЕРСИИ ВСЕМ ТРАНИЦАМ-->
+<!-- Сайт по продаже шпоргалок для учащихся в МосПолитехе -->
+<!--https://www.schoolsw3.com/howto/howto_js_filter_dropdown.php-->
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagesForExam/Logo.png" alt="logo">
+            </a>
+        </div>
+        <nav class="mainMenu">
+            <a class="icons" id="catalog" href="index.html">
+                <img src="imagesForExam/Catalog.png" alt="catalog">
+            </a>
+            <a class="icons" id="basket" href="">
+                <img src="imagesForExam/Basket.png" alt="basket">
+            </a>
+            <a class="icons" href="lk.html">
+                <img src="imagesForExam/Lk.png" alt="lk">
+            </a>
+        </nav>
+    </header>
+    <!-- Уведомление -->
+    <div class="notification"></div>
+    <main class="container">
+        <div class="basket">
+            <h2>Корзина</h2>
+            <div class="basket-items"></div>
+        </div>
+        <div class="order-form">
+            <h2>Оформление заказа</h2>
+            <form method="POST" action="https://httpbin.org/post"><!--https://edu.std-900.ist.mospolytech.ru-->
+                <div class="client-info">
+                    <div class="inputtext">
+                        <label for="client-name">Имя</label>
+                        <input type="text" placeholder="Иванов Иван Иванович" id="client-name" name="c-name" required>
+                    </div>
+
+                    <div class="inputtext">
+                        <label for="client-address">Адрес доставки</label>
+                        <input type="text" placeholder="Прянишникова 2A" id="client-address" name="c-address" required>
+                        <label class="small-label" for="client-address">Доставка осуществляется по всем городам, где есть МосПолитех</label>
+                    </div>
+
+                    <div class="inputtext">
+                        <label for="client-tel">Номер телефона</label>
+                        <input type="tel" placeholder="+7-800-555-35-55" id="client-tel" name="c-tel" required>
+                    </div>
+
+                    <div class="inputtext">
+                        <label for="client-date">Дата доставки</label>
+                        <input type="date" placeholder="21.12.2024" id="client-date" name="c-date" required>
+                    </div>
+
+                    <div class="inputtext">
+                        <label for="client-email">Email</label>
+                        <input type="email" placeholder="example@mail.com" id="client-email" name="c-email" required>
+                        <label class="str-agree"><input type="checkbox" id="agree" name="agree" checked> Подписаться на рассылку</label>
+                    </div>
+                    
+                    <div class="inputtext">
+                        <label for="client-time">Временной интервал доставки</label>
+                        <select name="c-time" id="client-time" required>
+                            <option value="">None</option>
+                            <option value="16:00-18:00">08:00-12:00</option>
+                            <option value="18:00-20:00">12:00-14:00</option>
+                            <option value="20:00-22:00">14:00-18:00</option>
+                            <option value="22:00-24:00">18:00-22:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="client-order">
+                    <div class="comment">
+                        <label for="comment">Комментарий к заказу</label>
+                        <textarea name="order-comment" id="comment" cols="35" rows="5"></textarea>
+                    </div>
+                    <div class="price">
+                        <p id="totalPrice"><b>Стоимость заказа:</b><span id="total"></span></p>
+                        <label class="small-label" for="totalPrice">(c учётом стоимости доставки: <span id="delivery-price"></span>)</label>
+                    </div>
+                </div>
+                <div class="order-buttons">
+                    <button type="reset" class="reset-btn">Сбросить</button>
+                    <button type="submit" class="submit-btn">Оформить</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer id="contacts">
+        <div class="contact">
+            <p>Позвонить нам: +7 (495) 223-05-23 </p>
+            <p>Stepanov Yura 231-3213 Exam</p>
+        </div>
+    </footer>
+    <script src="basket.js"> defer</script>
+</body>
+</html>

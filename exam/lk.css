@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 5px 10px 5px;
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+
+.notification {
+    display: none;
+    position: relative;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px 20px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    margin: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.notification.active {
+    display: flex;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3c763d;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+main{
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+h2 {
+    margin: 20px;
+    width: 100%;
+    justify-content: left;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.pull-offers {
+    justify-content: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-right: none;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.actions i {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    background-color: whitesmoke;
+    color: black;
+    position: relative;
+}
+
+.mainMenu {
+    width: 150px;
+    height: 30px;
+    display: inline-flex;
+}
+
+.icons img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    width: max-content;
+    height: 50px;
+    margin-left: 75px;
+}
+
+.logo img, a {
+    width: 100%;
+    height: 60px;
+}
+
+.icons > img:hover {
+    transform: translateY(-2.1rem);
+    transform: scale(1.2);
+    border-radius: 50%;
+    background-color: #2ecc71;
+}
+
+#catalog > img:hover {
+    transform: translateY(-2.1rem);
+    transform: scale(1.2);
+    border-radius: 10%;
+    background-color: #2ecc71;
+}
+
+#lk > img {
+    transform: translateY(-2.1rem);
+    transform: scale(1.2);
+    border-radius: 50%;
+    background-color: #2ecc71;
+}
